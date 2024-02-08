@@ -6,8 +6,12 @@ name: Calculator package
 on:
   push:
     branches: [ "main" ]
+    paths:
+      - 'calculator/**'
   pull_request:
     branches: [ "main" ]
+    paths:
+      - 'calculator/**'
 
 jobs:
   build:
