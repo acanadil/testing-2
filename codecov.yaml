@@ -1,7 +1,6 @@
-coverage:
-  status:
-    project:
-      calculator:
-        target: auto
-      predictor:
-        target: auto
+# codecov.yml
+codecov:
+  require_ci_to_pass: yes
+  paths:
+    - 'folder1/'
+    - 'folder2/'
