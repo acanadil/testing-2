@@ -6,8 +6,12 @@ name: Predictor package
 on:
   push:
     branches: [ "main" ]
+    paths:
+      - 'predictor/**'
   pull_request:
     branches: [ "main" ]
+    paths:
+      - 'predictor/**'
 
 jobs:
   build:
