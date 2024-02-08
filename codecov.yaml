@@ -1,0 +1,7 @@
+coverage:
+  status:
+    project:
+      calculator:
+        target: auto
+      predictor:
+        target: auto
