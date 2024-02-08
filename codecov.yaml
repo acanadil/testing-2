@@ -2,5 +2,5 @@
 codecov:
   require_ci_to_pass: yes
   paths:
-    - 'folder1/'
-    - 'folder2/'
+    - 'calculator/'
+    - 'predictor/'
