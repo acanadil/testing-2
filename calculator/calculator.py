@@ -7,7 +7,6 @@ class Calculator:
         return x - y
 
     def multiply(x, y):
-        #comment
         return x * y
 
     def divide(x, y):
