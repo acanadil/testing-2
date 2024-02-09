@@ -58,3 +58,4 @@ jobs:
         token: ${{ secrets.CODECOV_TOKEN }}
         verbose: true
         slug: acanadil/testing-2
+        flags: calculator
