@@ -1,6 +1,0 @@
-# codecov.yml
-codecov:
-  require_ci_to_pass: yes
-  paths:
-    - 'calculator/'
-    - 'predictor/'
