@@ -1,0 +1,16 @@
+component_management:
+  default_rules:	# Dict. rules inherited by all components that don't define a tag for themselves.
+    paths: # List. Path filters.
+    flag_regexes: # List. Flags to be included in the component.
+    statuses: # List. Status definitions.
+    # These statuses are the same as for flag_management
+    # Except they don't accept 'flags'
+  individual_components:  # List. These are the actual components.
+    - component_id: module_calculator
+      name: calculator
+      paths:
+        - calculator/**
+    - component_id: module_predictor
+      name: predictor
+      paths:
+        - predictor/**
