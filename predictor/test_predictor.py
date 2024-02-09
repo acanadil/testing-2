@@ -10,4 +10,4 @@ def test_predict_age():
 def test_predict_nationality():
     nationalities = ["spanish", "german", "french", "balcan", "british", "belgian"]
 
-    assert assert Predictor.predict_nationality(nationalities) in nationalities
+    assert Predictor.predict_nationality(nationalities) in nationalities
