@@ -9,6 +9,6 @@ class Predictor:
         return age
     
     def predict_nationality(nationalities: list[str]):
-        index = random.randint(0, len(nationalities))
+        index = random.randint(0, len(nationalities)-1)
         print("Your nationality is.. " + nationalities[index])
         return nationalities[index]
