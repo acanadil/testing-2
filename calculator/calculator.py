@@ -12,5 +12,5 @@ class Calculator:
 
     def divide(x, y):
         if y == 0:
-            return 'Can\'t divde by 0'
+            return 'Can\'t divide by 0'
         return x * 1.0 / y
