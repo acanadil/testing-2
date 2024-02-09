@@ -1,0 +1,6 @@
+flags:
+  calculator:
+    carryforward: true
+  
+  predictor:
+    carryforward: true
