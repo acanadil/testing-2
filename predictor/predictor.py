@@ -8,7 +8,7 @@ class Predictor:
         print("Your age is.. " + str(age) + "!")
         return age
     
-    def predict_nationality(nationalities: str[]):
+    def predict_nationality(nationalities: list[str]):
         index = random.randint(0, len(nationalities))
         print("Your nationality is.. " + nationalities[index])
         return nationalities[index]
