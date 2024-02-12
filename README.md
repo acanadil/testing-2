@@ -1,11 +1,11 @@
 # ACANADILLA REPO 2
-###Global
+### Global
 [![codecov](https://codecov.io/gh/acanadil/testing-2/graph/badge.svg?token=MWKQAIMYS3)](https://codecov.io/gh/acanadil/testing-2)
 
-###Calculator
+### Calculator
 [![codecov](https://codecov.io/gh/acanadil/testing-2/graph/badge.svg?token=MWKQAIMYS3&flag=calculator)](https://codecov.io/gh/acanadil/testing-2)
 
-###Predictor
+### Predictor
 [![codecov](https://codecov.io/gh/acanadil/testing-2/graph/badge.svg?token=MWKQAIMYS3&flag=predictor)](https://codecov.io/gh/acanadil/testing-2)
 
 ---
