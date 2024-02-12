@@ -7,7 +7,7 @@ class Calculator:
         return bin(x - y)
 
     def multiply(x, y):
-        #
+        
         return bin(x * y)
 
     def divide(x, y):
