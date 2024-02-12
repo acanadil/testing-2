@@ -1,4 +1,4 @@
-class Calculator:
+class Calculator_Binary:
 
     def add(x, y):
         return bin(x + y)
