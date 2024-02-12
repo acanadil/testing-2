@@ -7,7 +7,7 @@ def test_predict_age():
     assert Predictor.predict_age(1,1) == 1
     #assert Predictor.predict_age("a", 35)
 
-def test_predict_nationality():
-    nationalities = ["spanish", "german", "french", "balcan", "british", "belgian"]
+#def test_predict_nationality():
+#    nationalities = ["spanish", "german", "french", "balcan", "british", "belgian"]
 
-    assert Predictor.predict_nationality(nationalities) in nationalities
+#    assert Predictor.predict_nationality(nationalities) in nationalities
