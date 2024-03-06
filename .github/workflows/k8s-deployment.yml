@@ -57,6 +57,11 @@ jobs:
         kubectl cluster-info
         kubectl get nodes
         kubectl get pods
+    - name: Install mc
+      run: |
+        curl https://dl.min.io/client/mc/release/linux-amd64/mc --create-dirs -o $HOME/minio-binaries/mc
+        chmod +x $HOME/minio-binaries/mc
+        export PATH=$PATH:$HOME/minio-binaries/
     - name: Install minio
       run: |
         docker pull minio/minio
@@ -70,5 +75,6 @@ jobs:
         
         docker logs minio_local
         mc alias set http://localhost:9000 myminioadmin minio-secret-key-change-me
+        mc admin info myminio
         
         
