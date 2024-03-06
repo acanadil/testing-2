@@ -75,7 +75,7 @@ jobs:
         echo "MINIO_VOLUMES=\"/mnt/data\"" >> default/minio
         echo "MINIO_OPTS=\"--console-address :9001\"" >> default/minio
         docker image ls
-        docker run -dt -p 9000:9000 -p 9001:9001 -v PATH:/mnt/data -v /home/runner/work/testing-2/testing-2/default/minio:/etc/config.env -e "MINIO_CONFIG_ENV_FILE=/etc/config.env" --name "minio_local" minio/minio server --console-address ":9001"
+        docker run -dt -p 9000:9000 -p 9001:9001 -v PATH:/mnt/data -v ./default/minio:/etc/config.env -e "MINIO_CONFIG_ENV_FILE=/etc/config.env" --name "minio_local" minio/minio server --console-address ":9001"
         echo "LOGS"
         docker logs minio_local
                 
