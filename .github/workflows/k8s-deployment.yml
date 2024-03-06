@@ -57,7 +57,7 @@ jobs:
         kubectl get pods
     - name: Install minio
       run: |
-        docker pull docker://minio/minio
+        docker pull minio/minio
         echo "MINIO_ROOT_USER=myminioadmin" > /etc/default/minio
         echo "MINIO_ROOT_PASSWORD=minio-secret-key-change-me" >> /etc/default/minio
         echo "MINIO_VOLUMES="/mnt/data" >> /etc/default/minio
