@@ -54,3 +54,16 @@ jobs:
         kubectl cluster-info
         kubectl get nodes
         kubectl get pods
+    - name: Install minio
+      run: |
+        docker pull docker://minio/minio
+        echo "MINIO_ROOT_USER=myminioadmin" > /etc/default/minio
+        echo "MINIO_ROOT_PASSWORD=minio-secret-key-change-me" >> /etc/default/minio
+        echo "MINIO_VOLUMES="/mnt/data" >> /etc/default/minio
+        echo "MINIO_OPTS="--console-address :9001" >> /etc/default/minio
+        docker run -dt -p 9000:9000 -p 9001:9001 -v PATH:/mnt/data -v /etc/default/minio:/etc/config.env -e "MINIO_CONFIG_ENV_FILE=/etc/config.env" --name "minio_local" minio server --console-address ":9001"
+        
+        docker logs minio
+        mc alias set http://localhost:9000 myminioadmin minio-secret-key-change-me
+        
+        
