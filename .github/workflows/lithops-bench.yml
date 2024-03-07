@@ -1,0 +1,54 @@
+# This workflow will run a localhost backend test
+name: Localhost Coverage
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10"]
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v3
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+    - name: Install lithops
+      run: |
+        pip install lithops
+    - name: Clone benchmark
+      run: |
+        git clone https://github.com/lithops-cloud/applications.git
+        cd applications/benchmarks/flops
+    - name: Run benchmark 100
+      run: |
+        python3 flops_benchmark.py -b localhost -s localhost --loopcount=5 --matn=4096 --tasks=100 --memory=1024 --outdir=localhost_100
+    - name: Run benchmark 1000
+      run: |
+        python3 flops_benchmark.py -b localhost -s localhost --loopcount=5 --matn=4096 --tasks=1000 --memory=1024 --outdir=localhost_1000
+
+    - name: 'Upload Artifact'
+      uses: actions/upload-artifact@v4
+      with:
+        name: plots_100
+        path: localhost_100/**
+    - name: 'Upload Artifact'
+      uses: actions/upload-artifact@v4
+      with:
+        name: plots_1000
+        path: localhost_1000/**
+        
+        
+  
