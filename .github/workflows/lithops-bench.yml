@@ -31,24 +31,25 @@ jobs:
     - name: Clone benchmark
       run: |
         git clone https://github.com/lithops-cloud/applications.git
-        cd applications/benchmarks/flops
     - name: Run benchmark 100
       run: |
+        cd applications/benchmarks/flops
         python3 flops_benchmark.py -b localhost -s localhost --loopcount=5 --matn=4096 --tasks=100 --memory=1024 --outdir=localhost_100
     - name: Run benchmark 1000
       run: |
+        cd applications/benchmarks/flops
         python3 flops_benchmark.py -b localhost -s localhost --loopcount=5 --matn=4096 --tasks=1000 --memory=1024 --outdir=localhost_1000
 
     - name: 'Upload Artifact'
       uses: actions/upload-artifact@v4
       with:
         name: plots_100
-        path: localhost_100/**
+        path: ./applications/benchmarks/flops/localhost_100/**
     - name: 'Upload Artifact'
       uses: actions/upload-artifact@v4
       with:
         name: plots_1000
-        path: localhost_1000/**
+        path: ./applications/benchmarks/flops/localhost_1000/**
         
         
   
