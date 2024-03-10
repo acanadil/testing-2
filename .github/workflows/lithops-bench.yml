@@ -1,4 +1,4 @@
-# This workflow will run a localhost backend test
+# This workflow will run a localhost backend test.
 name: Localhost Coverage
 
 on:
