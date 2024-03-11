@@ -28,7 +28,7 @@ jobs:
       run: |
         pwd
         python -m pip install --upgrade pip
-        
+
     - name: Sleep
       run: |
         sleep 60
@@ -36,7 +36,3 @@ jobs:
     - name: Hello world
       run: |
         echo "Hello World"
-
-    -name: Sleep again
-      run: |
-        sleep 120
