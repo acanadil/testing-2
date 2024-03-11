@@ -31,6 +31,8 @@ jobs:
 
     - name: Sleep
       run: |
+        echo "$GITHUB_REPOSITORY"
+        echo "${GITHUB_REPOSITORY#*/}"
         sleep 60
 
     - name: Hello world
