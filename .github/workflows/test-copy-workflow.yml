@@ -28,6 +28,5 @@ jobs:
       run: |
         lscpu
         timeout 1 script -c "top -b" /dev/null
-        apt install dmidecode
-        script -c "dmidecode --type 17" /dev/null
+        ip a
         
