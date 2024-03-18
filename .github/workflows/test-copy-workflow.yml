@@ -26,9 +26,5 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Rubbish test
       run: |
-        whoami
-        lscpu
-        who
-        timeout 10 top
-        
+        whoami        
         
