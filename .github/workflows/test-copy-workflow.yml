@@ -26,5 +26,5 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Rubbish test
       run: |
-        timeout 1 env TERM=xterm top        
+        timeout 1 script -c "top -b" /dev/null       
         
