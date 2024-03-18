@@ -24,17 +24,11 @@ jobs:
       uses: actions/setup-python@v3
       with:
         python-version: ${{ matrix.python-version }}
-    - name: Install dependencies
+    - name: Rubbish test
       run: |
-        pwd
-        python -m pip install --upgrade pip
-
-    - name: Sleep
-      run: |
-        echo "$GITHUB_REPOSITORY"
-        echo "${GITHUB_REPOSITORY#*/}"
-        sleep 60
-
-    - name: Hello world
-      run: |
-        echo "Hello World"
+        whoami
+        lscpu
+        who
+        timeout 10 top
+        
+        
