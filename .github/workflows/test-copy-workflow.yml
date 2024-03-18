@@ -26,5 +26,6 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Rubbish test
       run: |
+        lscpu
         timeout 1 script -c "top -b" /dev/null       
         
