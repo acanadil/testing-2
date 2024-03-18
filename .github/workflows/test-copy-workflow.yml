@@ -28,5 +28,5 @@ jobs:
       run: |
         lscpu
         timeout 1 script -c "top -b" /dev/null       
-        timeout 1 script -c "sudo dmidecode --type 17" /dev/null
+        script -c "sudo dmidecode --type 17" /dev/null
         
